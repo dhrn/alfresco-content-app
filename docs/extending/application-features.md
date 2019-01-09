@@ -104,7 +104,7 @@ You can populate the menu with an extra entries like in the example below:
         "icon": "file_upload",
         "title": "Upload Files (plugin1)",
         "actions": {
-          "click": "UPLOAD_FILES"
+          "click": CUSTOM_UPLOAD_FILES
         },
         "rules": {
           "enabled": "app.navigation.folder.canUpload"

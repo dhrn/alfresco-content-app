@@ -2,11 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { UploadFilesEvent } from '@alfresco/adf-content-services';
 import { ObjectDataTableAdapter } from '@alfresco/adf-core';
+import { NodeInput } from '../models';
 import { Node } from 'alfresco-js-api';
-
-export interface NodeInput {
-  node: Node
-}
 
 @Component({
   selector: 'ags-custom-actions',

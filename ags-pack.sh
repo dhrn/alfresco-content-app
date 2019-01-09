@@ -1,4 +1,11 @@
 #!/bin/sh
+
+echo "Copying  assets .....";
+
+cp ./projects/ags-extension/i18n/ src/assets/ags-extension -r
+
+echo "Done";
+
 echo "Packing the changes .....";
 
 npm run pack:ags-extension

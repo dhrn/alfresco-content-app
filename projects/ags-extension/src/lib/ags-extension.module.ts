@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
-import { ExtensionService, ExtensionsModule } from '@alfresco/adf-extensions';
+import { ExtensionsModule } from '@alfresco/adf-extensions';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CoreModule } from '@alfresco/adf-core';
+import { CoreModule, TRANSLATION_PROVIDER } from '@alfresco/adf-core';
 import { ContentModule } from '@alfresco/adf-content-services';
 import { EffectsModule } from '@ngrx/effects';
-import { UploadFileComponent } from './dialogs';
+import { UploadFileComponent, RenameFileComponent } from './dialogs';
 import { ExtensionEffects } from './effects';
+
+export function getComponents() {
+  return [
+    UploadFileComponent,
+    RenameFileComponent
+  ]
+}
 
 @NgModule({
   imports: [
@@ -15,20 +22,24 @@ import { ExtensionEffects } from './effects';
     ContentModule.forChild(),
     EffectsModule.forFeature([ ExtensionEffects ])
   ],
+  providers: [
+    {
+      provide: TRANSLATION_PROVIDER,
+      multi: true,
+      useValue: {
+        name: 'ags-extension',
+        source: 'assets/ags-extension'
+      }
+    }
+  ],
   declarations: [
-    UploadFileComponent
+    ...getComponents()
   ],
   entryComponents: [
-    UploadFileComponent
+    ...getComponents()
   ],
   exports: [
-    UploadFileComponent
+    ...getComponents()
   ]
 })
-export class AgsExtensionModule {
-  constructor(extensions: ExtensionService) {
-    extensions.setComponents({
-      'ags-extension.main.component': UploadFileComponent
-    });
-  }
-}
+export class AgsExtensionModule {}

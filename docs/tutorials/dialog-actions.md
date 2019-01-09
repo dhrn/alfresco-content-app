@@ -142,7 +142,7 @@ Update the `src/assets/app.extensions.json` file, and insert a new entry to the 
         "title": "Custom action",
         "icon": "extension",
         "actions": {
-          "click": "SHOW_MY_DIALOG"
+          "click": UPLOAD_FILES
         }
       }
     ]

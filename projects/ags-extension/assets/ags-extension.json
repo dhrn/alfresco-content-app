@@ -15,6 +15,13 @@
       "parameters": [
         { "type": "rule", "value": "app.selection.folder" }
       ]
+    },
+    {
+      "id": "app.extension.isFile",
+      "type": "core.every",
+      "parameters": [
+        { "type": "rule", "value": "app.selection.file" }
+      ]
     }
   ],
 
@@ -24,7 +31,7 @@
         "id": "app.toolbar.more",
         "children": [
           {
-            "id": "app.toolbar.favorite.add",
+            "id": "app.toolbar.extension.upload.files",
             "order": 1600,
             "title": "Upload File",
             "icon": "file_upload",
@@ -32,7 +39,19 @@
               "visible": "app.extension.isFolder"
             },
             "actions": {
-              "click": "SHOW_MY_DIALOG"
+              "click": "CUSTOM_UPLOAD_FILES"
+            }
+          },
+          {
+            "id": "app.toolbar.extension.rename.file",
+            "order": 1605,
+            "title": "Rename File",
+            "icon": "create",
+            "rules": {
+              "visible": "app.extension.isFile"
+            },
+            "actions": {
+              "click": "RENAME_FILE"
             }
           }
         ]
@@ -45,7 +64,7 @@
         "order": 1500
       },
       {
-        "id": "Custom Action",
+        "id": "app.toolbar.extension.upload.file",
         "order": 1501,
         "title": "Upload File",
         "icon": "file_upload",
@@ -53,7 +72,19 @@
           "visible": "app.extension.isFolder"
         },
         "actions": {
-          "click": "SHOW_MY_DIALOG"
+          "click": "CUSTOM_UPLOAD_FILES"
+        }
+      },
+      {
+        "id": "app.toolbar.extension.rename.file",
+        "order": 1502,
+        "title": "Rename File",
+        "icon": "create",
+        "rules": {
+          "visible": "app.extension.isFile"
+        },
+        "actions": {
+          "click": "RENAME_FILE"
         }
       }
     ]
