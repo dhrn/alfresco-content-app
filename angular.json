@@ -54,6 +54,16 @@
                 "glob": "extension.schema.json",
                 "input": ".",
                 "output": "./assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/adf-governance/assets/adf-governance",
+                "output": "/assets/adf-governance"
+              },
+              {
+                "glob": "*.json",
+                "input": "node_modules/adf-governance/assets",
+                "output": "/assets/plugins/"
               }
             ],
             "styles": [
