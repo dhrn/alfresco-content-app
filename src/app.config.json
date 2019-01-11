@@ -1,5 +1,5 @@
 {
-  "ecmHost": "{protocol}//{hostname}{:port}",
+  "ecmHost": "{protocol}//{hostname}{:port}/ecm",
   "baseShareUrl": null,
   "providers": "ECM",
   "authType": "BASIC",

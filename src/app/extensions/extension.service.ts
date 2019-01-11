@@ -225,6 +225,7 @@ export class AppExtensionService implements RuleContext {
   }
 
   protected getDocumentListPreset(config: ExtensionConfig, key: string) {
+    console.log('preset loading');
     return this.loader
       .getElements<DocumentListPresetRef>(
         config,
@@ -295,7 +296,7 @@ export class AppExtensionService implements RuleContext {
     return { presets };
   }
 
-  filterDisabled(object) {
+  filterDisabled(object: any) {
     if (Array.isArray(object)) {
       return object
         .filter(item => !item.disabled)

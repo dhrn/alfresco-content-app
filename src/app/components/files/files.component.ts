@@ -128,6 +128,7 @@ export class FilesComponent extends PageComponent implements OnInit, OnDestroy {
       });
 
     this.columns = this.extensions.documentListPresets.files || [];
+    console.log('preset assigned', this.extensions.documentListPresets.files)
   }
 
   ngOnDestroy() {
