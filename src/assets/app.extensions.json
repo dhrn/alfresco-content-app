@@ -7,7 +7,12 @@
   "$license": "LGPL-3.0",
   "$runtime": "1.5.0",
   "$description": "Core application extensions and features",
-  "$references": [],
+  "$references": [
+    "declare-record-plugin.json",
+    "rename-file-plugin.json",
+    "upload-file-plugin.json",
+    "record-icon.plugin.json"
+  ],
 
   "rules": [
     {

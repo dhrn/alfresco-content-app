@@ -54,6 +54,16 @@
                 "glob": "extension.schema.json",
                 "input": ".",
                 "output": "./assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/adf-governance/assets/adf-governance",
+                "output": "/assets/adf-governance"
+              },
+              {
+                "glob": "*.json",
+                "input": "node_modules/adf-governance/assets",
+                "output": "/assets/plugins/"
               }
             ],
             "styles": [
@@ -108,7 +118,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "app:build",
-            "port": 4200,
+            "port": 3000,
             "host": "0.0.0.0",
             "proxyConfig": "proxy.conf.js"
           },
