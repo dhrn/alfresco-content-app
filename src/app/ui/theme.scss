@@ -2,6 +2,7 @@
 
 @import '~@alfresco/adf-content-services/theming';
 @import '~@alfresco/adf-core/theming';
+@import '~@alfresco/adf-governance/theming';
 
 @import 'custom-theme';
 
@@ -16,5 +17,6 @@ $theme: mat-light-theme($primary, $accent, $warn);
 
 @include adf-content-services-theme($theme);
 @include adf-core-theme($theme);
+@include adf-governance-theme($theme);
 
 @include custom-theme($custom-theme);

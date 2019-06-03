@@ -69,6 +69,21 @@
                 "glob": "aos.plugin.json",
                 "input": "projects/adf-office-services-ext/assets",
                 "output": "./assets/plugins"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@alfresco/adf-governance/assets/adf-governance",
+                "output": "/assets/adf-governance/i18n"
+              },
+              {
+                "glob": "*.json",
+                "input": "node_modules/@alfresco/adf-governance/assets",
+                "output": "/assets/plugins/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@alfresco/adf-governance/assets/icons",
+                "output": "/assets/images/"
               }
             ],
             "styles": [
